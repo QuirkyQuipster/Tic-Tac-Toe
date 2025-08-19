@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#76c893;
+    text-align: center;
+}
+.container{
+    /* 70% of viewport height will be given to container class */
+    height: 70vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* create space between divs */
+    gap: 1.5vmin;  
+}
+.box{
+    /* as game contains 60% to divide it in 3 parts(all box in 3 lines) we need to give 20% to each */
+    height:18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border:none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-size: 8vmin;
+    color: #e5989b;
+    background-color: #EDF6F9;
+}
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #0e5045;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+#new-btn{
+     padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #0e5045;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+#msg{
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.hide{
+    display: none;
+}
