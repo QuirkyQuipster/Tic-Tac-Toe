@@ -1,0 +1,142 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #c3ecf7, #fceabb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Main title */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Game container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Game Grid */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+/* Individual Box */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+   background-color: #f0f0f0; 
+   /* to pop-up the box on hover */
+   transform: scale(1.05);  
+}
+
+/* Message Container */
+.msg-container {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  text-align: center;
+  display: none;
+}
+
+.msg-container.show {
+  display: block;
+}
+
+#msg {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #00796b;
+}
+
+/* Buttons */
+button#reset-btn, button#new-btn {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#reset-btn:hover,
+button#new-btn:hover {
+  background-color: #004d40;
+}
+.top-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#sound-toggle,
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 🌗 THEME TOGGLE STYLES */
+:root {
+  --bg-color: linear-gradient(135deg, #c3ecf7, #fceabb);
+  --box-color: #fff;
+  --text-color: #333;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.box {
+  background-color: var(--box-color);
+  color: var(--text-color);
+}
+
+/* 🌙 DARK THEME OVERRIDES */
+body.dark {
+  --bg-color: #121212;
+  --box-color: #1e1e1e;
+  --text-color: #f5f5f5;
+}
+
